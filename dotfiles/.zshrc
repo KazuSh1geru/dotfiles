@@ -183,9 +183,19 @@ export DOCKER_HOST=unix:///Users/kazushi-takakusagi/.rd/docker.sock
 export DENO_INSTALL="/Users/kazushi-takakusagi/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+export NPM_TOKEN=$NPM_TOKEN
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/kazushi-takakusagi/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# pnpm
+export PNPM_HOME="/Users/kazushi-takakusagi/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
