@@ -1,4 +1,5 @@
-# 機械固有の設定（git 管理しない）
+# 機密・機械固有の設定
+.env
 claude/settings.local.json
 
 # macOS

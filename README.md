@@ -1,8 +1,12 @@
 # dotfiles
 
-個人の Claude Code 設定を管理する dotfiles リポジトリ。
+リセットできる環境は安心である.
 
-## 管理対象
+## Claude Code 設定
+
+個人の Claude Code 環境（プラグイン/スキル/指示）を管理する。
+
+### 管理対象
 
 | パス | dotfiles パス | 説明 |
 |---|---|---|
@@ -61,3 +65,11 @@ bash ~/dotfiles/install.sh
 
 壁打ち・設計・記事執筆・Issue管理などのワークフロースキル。
 詳細は `claude/skills/` 以下の各スキルの `SKILL.md` を参照。
+
+## シェル dotfiles（dotfiles/）
+
+`.zshrc`, `.bashrc`, `.gitconfig` 等のシェル設定。
+
+## 参考
+
+- [dotfilesを管理する](https://zenn.dev/cloud_ace/articles/1d57617f83cd74)
