@@ -1,0 +1,5 @@
+# 機械固有の設定（git 管理しない）
+claude/settings.local.json
+
+# macOS
+.DS_Store

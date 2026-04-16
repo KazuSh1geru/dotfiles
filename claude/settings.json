@@ -1,0 +1,88 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(PATH=\"/opt/homebrew/bin:$PATH\" AWS_PROFILE=dx-prod-developer /opt/homebrew/bin/sam deploy:*)"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.py"
+  },
+  "enabledPlugins": {
+    "claude-telemetry@lmi": true,
+    "example-skills@anthropic-agent-skills": true,
+    "document-skills@anthropic-agent-skills": true,
+    "changelog-generator@awesome-claude-skills": true,
+    "confluence-automation@awesome-claude-skills": true,
+    "figma-automation@awesome-claude-skills": true,
+    "gitlab-automation@awesome-claude-skills": true,
+    "google-calendar-automation@awesome-claude-skills": true,
+    "googlesheets-automation@awesome-claude-skills": true,
+    "mcp-builder@awesome-claude-skills": true,
+    "slack-automation@awesome-claude-skills": true,
+    "skill-creator@awesome-claude-skills": true,
+    "supabase-automation@awesome-claude-skills": true,
+    "webapp-testing@awesome-claude-skills": true,
+    "jira-automation@awesome-claude-skills": true,
+    "scheduler@claude-scheduler": true,
+    "discovery@discovery": true,
+    "slack@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "dxu-pages@dx-ai-skills": true,
+    "codex@openai-codex": true,
+    "frontend-design@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "lmi": {
+      "source": {
+        "source": "github",
+        "repo": "lmi-mcs/claude-code-telemetry"
+      },
+      "autoUpdate": true
+    },
+    "discovery": {
+      "source": {
+        "source": "github",
+        "repo": "lmi-mcs/discovery-skills"
+      }
+    },
+    "dx-risk-manager": {
+      "source": {
+        "source": "github",
+        "repo": "lmi-mcs/dx-risk-manager"
+      }
+    },
+    "dx-ai-skills": {
+      "source": {
+        "source": "github",
+        "repo": "lmi-mcs/dx-ai-skills"
+      },
+      "autoUpdate": true
+    },
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    }
+  },
+  "language": "日本語",
+  "effortLevel": "medium",
+  "autoUpdatesChannel": "latest",
+  "voiceEnabled": true,
+  "autoDreamEnabled": true,
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true,
+  "releaseChannel": "latest",
+  "teammateMode": "in-process"
+}
