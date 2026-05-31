@@ -75,6 +75,23 @@
 
 このパターンが出ていたら「妄想モードに入っていない？」と指摘してください。
 
+## ツール運用ルール
+
+### GitHub issue の閲覧
+
+- `gh issue view` ではなく **`gh issue-view`**（alias）を使う
+- 理由: bare な `gh issue view` は classic Projects 廃止の影響で GraphQL エラー（`repository.issue.projectCards`）で落ちることがある。`issue-view` alias は `--json number,title,state,body,labels,assignees,author,createdAt,updatedAt,milestone,url,comments` で必要フィールドのみ取得し、`projectCards` を避ける
+- 出力は JSON。整形が必要なら `gh issue-view <num> --repo <owner>/<repo> | jq` を使う
+- `gh issue list` など他コマンドで同種のエラーが出たら同様に `--json` 形式で叩く
+
+### Issue 起点作業のコミット規約
+
+- Issue 起点で作業（壁打ち・調査・実装）し、その成果をコミットするとき、コミットメッセージに `Closes #<番号>`（`Fixes` / `Resolves` も可）を入れる
+- 理由: PR を作らない `main` 直push でも、コミットメッセージにキーワードがあれば GitHub が Issue を自動クローズする。PR は必須ではない。直push運用で Issue が未完了のまま残るのを防ぐ
+- 複数Issue起点なら `Closes #12, Closes #34` のように**各番号にキーワードを付ける**
+- 完了基準: Issue 本来の目的（思考の構造化・課題解決）が果たされたらクローズ。未実行の next action が残る場合は、クローズ前にコメントで成果リンク＋残タスクを残し、実行は別Issue/ノートで追跡
+- ローカルコミットのみで push しない段階では自動クローズは発動しない。即時クローズは `gh issue close <番号> --comment "..."` を併用
+
 ---
 
 今やり直せよ、未来を。という言葉が好きです。
